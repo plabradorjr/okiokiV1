@@ -9,7 +9,7 @@ export async function POST(req: NextRequest) {
     const response = NextResponse.json({ success: true });
     response.cookies.set("authenticated", "true", {
       path: "/",
-      maxAge: 60 * 60 * 24,
+      maxAge: 1209600, // 2 weeks in seconds
     });
     return response;
   } else {
